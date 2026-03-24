@@ -65,6 +65,38 @@ https://github.com/user-attachments/assets/e32be8ca-4484-4957-aab7-82bc262c51c0
 
 You may have already noticed that other vectors on the plane also move with the transformation. And that is true, as a Linear transformation tends to shift everything into one direction, depending on how the basis vectors change.
 
-A linear transformation that is not evenly-spaced or parallel cannot be considered linear.
+A linear transformation that is _not evenly spaced_ or _not parallel_ cannot be considered linear.
 
+In the following example, could you tell which one is considered a linear transformation?
+
+![image](https://3b1b-posts.us-east-1.linodeobjects.com/content/lessons/2016/linear-transformations/figures/what-makes-a-transformation-linear/question1.png)
+
+>[!NOTE]
+>The answer is C. As the grid lines are parallel and evenly-spaced.
+
+>[!IMPORTANT]
+>Matrix multiplication can be considered as a function to linearly transform the basis vectors. In which you multiply the basis vectors by any matrix/vector to give a specific transformation.
+>
+>for example:
+>
+![image](https://www.3blue1brown.com/content/lessons/2016/linear-transformations/figures/examples/ShearMatrix.svg)
+
+this is a shear transformation. For now, you dont have to know what that means or how it looks like, but the idea here is that we multiply the basis vectors by the shear vector (x,y) to make the matrix turn into [(1,0),(1,1)]. which gives a shear-looking coordinate plane, where j-hat moves one unit to the right. Keep in mind that the first column of the matrix represents i-hat, and the second column represents j-hat.
+
+### linear systems being represented in matrix equations and vector equations
+
+<img width="202" height="93" alt="image" src="https://github.com/user-attachments/assets/ebd64451-2441-4eec-9b29-a1b277ee1107" />
+
+such linear systems can be represented as matrices, where you insert their coefficients as entries.
+
+<img width="194" height="82" alt="image" src="https://github.com/user-attachments/assets/187a29aa-6251-467a-b039-42e9d67fd6f9" />
+
+but they could also be represented as matrix equations. Matrix equations are simply a linear system that is written in the form ``Ax = b``, where ``A`` is a matrix containing the coefficients, ``x`` is a vector containing the unknowns, and ``b`` is the result as a vector. Take this linear system as an example:
+
+<img width="726" height="407" alt="image" src="https://github.com/user-attachments/assets/c5ad3b4e-1f93-411b-a665-941e8edecb60" />
+
+with the help of linear combinations (which consists of 2 operations: multiplying by a scalar and adding) we can reform (1) as a series of linear combinations that form a vector equation (2), and then into a single matrix equation (3).
+
+>[!NOTE]
+>geometrically, we would represent ``A`` as a transformation to the vector containing (x,y) to give us our result (4,1). The video up could be a demonstration to this. Before the transformation, we had our basis vectors (1,0) , (0,1) as
 
