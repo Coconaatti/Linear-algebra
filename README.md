@@ -189,6 +189,7 @@ using numbers, it should look like this:
 <img width="556" height="119" alt="image" src="https://github.com/user-attachments/assets/0b83a37b-e34b-4141-a80a-7178b263e215" />
 
 here are some images that may help you with this, do note that these are different equations from the previous:
+
 <img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/6c79941d-d04e-470e-bbb6-0a79741c37f4" />
 <img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/e40673c4-10f0-4634-9c9a-569a4b46bd43" />
 <img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/2888c604-4ed2-4d3c-a7be-1b6fc0219565" />
