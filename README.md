@@ -11,6 +11,10 @@
   * linear transformations
 
 * #### Explanation of Determinants geometrically
+* #### Cramer's Rule
+* #### Sources
+* #### Thanks
+
 
 <hr>
 
@@ -114,6 +118,11 @@ The change of area could be negative. In such a case, the orientation flips and 
 
 So all of the numerical numbers we were getting from the result of the determinant represented the change of area scale if we applied the linear transformation of multiplying a matrix by the basis vectors. Could you tell what the determinant of a basis vector is? It's one. because if we were to multiply that determinant by every area in the space, we will have no change. Since the determinant is one, and multiplication by one has no effect on areas.
 
+Determinants can also be used to get actual areas of figures. This rule will explain:
+
+<img width="908" height="102" alt="image" src="https://github.com/user-attachments/assets/bfbe5888-5c3b-4797-8d7c-355377f1ef74" />
+
+
 OK. But how does the formula ``det(A) = ad-bc`` work?
 generally: 
   * ``a`` would represent how much i-hat moves in the x-coordinate.
@@ -149,5 +158,61 @@ Surely, the surroundings can differ based on the figure.
 
 No idea how this can be calculated, actually.
 
-## Carmer's rule
+## Cramer's rule represented geometrically
+To start, lets go back a bit with dot products. Technically, dot products cannot be preserved after a Linear transformation, this is because of the change of the coordinates. of the vectors. even vectors that are perpendicular (dot product of zero) are not preserved. But there is a special type of linear transformations that do preserve the dot product of the input. Such linear transformations are known to be "orthanormal". 
 
+From there if I said I have the equation ``Ax = b``, where A is a matrix that causes an orthanormal linear transformation, and ``b`` as the result. I can get ``x``, the unknown vector by multiplying the dot product of b with the columns of A. Where the first column gives X, and the second column gives Y.
+
+We want to achieve a similar effect, but geometrically.
+
+First, start by drawing a plane with our normal basis vectors: ``[(1,0),(0,1)]``. Then, draw the unknown input vector ``[(x,y)]``. draw a parallelogram such that its base is one of the basis vectors, and its second side is the unknown input vector. Let's start with i-hat. it's height would be the entry ``y`` in the unknown input vector, and the area would be equal to `` 1 by Y (or equal to Y)``
+
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/1efec351-f1ea-499f-9a51-fef0ae4476ea" />
+
+if we were to treat j-hat as the base, and ``x`` as the height, it's area would be ``1 by x (or equal to x)`` it would look like this:
+
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/e9c07fc0-a14a-45d3-a5fe-31c966f98f47" />
+
+Provided that we apply a Linear transformation on the basis vectors, and that a constant change of area is applied to the whole area of the plane, including our parallelogram. Now we could say that the new area equals ``new Area = det(A) by Y``.
+by dividing the new area over the determinant. we get: ``Y = new Area / det(A)``. 
+
+lets provide an example with numbers to proceed further.
+
+<img width="480" height="120" alt="image" src="https://github.com/user-attachments/assets/6ff187fe-b4a4-44ae-b848-fe2bef39c80a" />
+
+Putting this into a matrix equation, ``Ax = b``, ``A is equal to [(3,2),(-1,2)]. x equals [(x,y)], b equals [(-4,-2)]``.
+Splitting this into dot products, we multiply x (the entry) by the first column of matrix A (3,2) and y by the second column of matrix A (-1,2), and add them together, all equal b. right now, it is as if we have draw the basis vectors and vector x with i-hat as the base and y as the height, with the area of our parallelogram being unaffected by any constant/determinant, which equals ``y`` After applying the transformation, i-hat becomes ``(3,2)``, our unknown input vector ``[(x,y)]`` becomes the result ``[(-4,-2)]`` *(since applying the transformation by matrix A to the unknown input vector gives us the result, it's exactly like saying: "hey, I need you to multiply this matrix by the input vector to give me a new output vector" Surely that output is just x,y but transformed!)* and we multiply the determinant by our parallelogram, the area becomes ``det(A) by Y``. and Y equals ``new Area / det(A)``.
+
+Let's sort everything out using determinants. getting the det(A) is fairly simple, just get the determinant of matrix A, and then, moving onto the new Area, We have to first specify a new matrix containing our coordinates, where the first column is the i-hat and the second column is ``b``, the result, *since x,y get transformed to ``b`` by the transformation applied from matrix A.*
+
+using numbers, it should look like this:
+
+<img width="556" height="119" alt="image" src="https://github.com/user-attachments/assets/0b83a37b-e34b-4141-a80a-7178b263e215" />
+
+here are some images that may help you with this, do note that these are different equations from the previous:
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/6c79941d-d04e-470e-bbb6-0a79741c37f4" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/e40673c4-10f0-4634-9c9a-569a4b46bd43" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/2888c604-4ed2-4d3c-a7be-1b6fc0219565" />
+
+#### Sources
+All of this information (and provided images) come from 3blue1brown tutorial list of "essence of linear algebra". I find it a nice way for visualizing math
+
+https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
+https://www.3blue1brown.com/topics/linear-algebra
+
+I focused especially on these atricles:
+
+https://www.3blue1brown.com/?v=linear-transformations 
+
+https://www.3blue1brown.com/?v=vectors 
+
+https://www.3blue1brown.com/?v=determinant 
+
+https://www.3blue1brown.com/?v=cramers-rule 
+
+https://www.3blue1brown.com/?v=matrix-multiplication
+
+#### Thanks
+
+شكرا لحضرتك يا مستر علي مجهودك و تعبك معانا الترم ده  بل في كل السنين ❤️
+والله المادة اختلفت لما بدأنا مع حضرتك, كل معلومة كبيرة و صغيرة ما بتفوتهاش ما شاء الله والفضل كله لله, من زمان كنت بحب الماث, لكن دلوقتي بعد البحث ده بقي عندي  شغف كبير جدا إن أنا أكمل في اللينيار الجيبرا بما أنها مفيدة جدا في أعمال البرمجة. ❤️
