@@ -1,6 +1,5 @@
 (كتبت البحث بالإنجليزي عشان مشكلة الكتابة من اليمين للشمال)
 
-## Determinants represented geometrically
 <hr>
 
 ### Table of Contents
