@@ -194,7 +194,7 @@ here are some images that may help you with this, do note that these are differe
 <img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/e40673c4-10f0-4634-9c9a-569a4b46bd43" />
 <img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/2888c604-4ed2-4d3c-a7be-1b6fc0219565" />
 
-#### Sources
+### Sources
 All of this information (and provided images) come from 3blue1brown tutorial list of "essence of linear algebra". I find it a nice way for visualizing math
 
 https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
@@ -212,7 +212,7 @@ https://www.3blue1brown.com/?v=cramers-rule
 
 https://www.3blue1brown.com/?v=matrix-multiplication
 
-#### Thanks
+### Thanks
 
 شكرا لحضرتك يا مستر علي مجهودك و تعبك معانا الترم ده  بل في كل السنين ❤️
 والله المادة اختلفت لما بدأنا مع حضرتك, كل معلومة كبيرة و صغيرة ما بتفوتهاش ما شاء الله والفضل كله لله, من زمان كنت بحب الماث, لكن دلوقتي بعد البحث ده بقي عندي  شغف كبير جدا إن أنا أكمل في اللينيار الجيبرا بما أنها مفيدة جدا في أعمال البرمجة. ❤️
