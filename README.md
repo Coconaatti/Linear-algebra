@@ -3,11 +3,14 @@
 ## Determinants represented geometrically
 <hr>
 
-### prerequisites
-* vectors
-* i-hat and j-hat
-* linear systems being represented in matrices and vectors
-* linear transformations
+### Table of Contents
+* #### prerequisites
+  * vectors
+  * i-hat and j-hat
+  * linear systems being represented in matrices and vectors
+  * linear transformations
+
+* #### Explanation of Determinants geometrically
 
 <hr>
 
@@ -93,10 +96,58 @@ such linear systems can be represented as matrices, where you insert their coeff
 
 but they could also be represented as matrix equations. Matrix equations are simply a linear system that is written in the form ``Ax = b``, where ``A`` is a matrix containing the coefficients, ``x`` is a vector containing the unknowns, and ``b`` is the result as a vector. Take this linear system as an example:
 
+
+
+
 <img width="726" height="407" alt="image" src="https://github.com/user-attachments/assets/c5ad3b4e-1f93-411b-a665-941e8edecb60" />
 
 with the help of linear combinations (which consists of 2 operations: multiplying by a scalar and adding) we can reform (1) as a series of linear combinations that form a vector equation (2), and then into a single matrix equation (3).
 
->[!NOTE]
->geometrically, we would represent ``A`` as a transformation to the vector containing (x,y) to give us our result (4,1). The video up could be a demonstration to this. Before the transformation, we had our basis vectors (1,0) , (0,1) as
+### Explanation of Determinants geometrically
+
+Determinants represent the change of area caused by the linear transformations on plane space / coordinate plane.
+
+Remember how we were talking above how the change of the basis vectors can cause squares to transform into rectangles or parallelograms, stretch out, or squish in? Undoubtedly with every change the area supposedly changes with the move. Determinants is a scalar value that is, when multiplied by the original area, transforms it into a new area. 
+The change of area could be negative. In such a case, the orientation flips and so is the area flipped. 
+
+<img alt="image" src="https://www.3blue1brown.com/content/lessons/2016/determinant/determinant_3.svg" />
+
+So all of the numerical numbers we were getting from the result of the determinant represented the change of area scale if we applied the linear transformation of multiplying a matrix by the basis vectors. Could you tell what the determinant of a basis vector is? It's one. because if we were to multiply that determinant by every area in the space, we will have no change. Since the determinant is one, and multiplication by one has no effect on areas.
+
+OK. But how does the formula ``det(A) = ad-bc`` work?
+generally: 
+  * ``a`` would represent how much i-hat moves in the x-coordinate.
+  * ``d`` would represent how much j-hat moves in the y-coordinate.
+  * ``c`` represents how much i-hat changes in the y-coordinate.
+  * ``b`` represents how much j-hat changes in the x-coordinate.
+  
+lets hide ``b`` and ``c`` (make them equal to zero)  and see what happens:
+  * ``a`` would represent how much i-hat moves in the x-coordinate.
+  * ``d`` would represent how much j-hat moves in the y-coordinate.
+  * A square/rectangle appears on the plane, its area is ``ad``
+
+lets hide ``a`` and ``d`` (make them equal to zero)  and see what happens:
+  * ``c`` represents how much i-hat changes in the y-coordinate.
+  * ``b`` represents how much j-hat changes in the x-coordinate.
+  * A square/rectangle appears on the plane, its area is ``bc``
+
+if we were to combine both areas ``ad`` and ``bc``, we would have the area of a Large rectangle. That is each column have one entry equal to zero.
+
+if they were all non-zero entries, ``b`` and ``c`` would tell us how much they squish or stretch the plane. And a parallelogram would be formed. But we still dont know the exact area of that parallelogram. 
+
+We could say that, since this parallelogram is in the boundaries of our Large rectangle, and since we have its area (from ``ad + bc``), we could calculate the areas of the parallelogram's surroundings, and then subtract it from the large rectangle to get the area of the parallelogram.
+
+<img src="https://www.3blue1brown.com/content/lessons/2016/determinant/determinant_diagram.svg" />
+
+with that, we're only left with ``ad - bc``.
+
+So in other words, ``ad - bc`` is the product of extremes and means of ``(a+b)(c+d)``. ``ad - bc`` is the result of subtracting the larger rectangle from the area of our figure.
+
+Surely, the surroundings can differ based on the figure.
+
+<img src="https://www.3blue1brown.com/content/lessons/2016/determinant/scale_areas.svg" />
+
+No idea how this can be calculated, actually.
+
+## Carmer's rule
 
