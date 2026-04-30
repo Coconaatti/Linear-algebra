@@ -113,7 +113,7 @@ Determinants represent the change of area caused by the linear transformations o
 Remember how we were talking above how the change of the basis vectors can cause squares to transform into rectangles or parallelograms, stretch out, or squish in? Undoubtedly with every change the area supposedly changes with the move. Determinants is a scalar value that is, when multiplied by the original area, transforms it into a new area. 
 The change of area could be negative. In such a case, the orientation flips and so is the area flipped. 
 
-<img alt="image" src="https://www.3blue1brown.com/content/lessons/2016/determinant/determinant_3.svg" />
+<img alt="image" src="https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2016/determinant/figures/determinant_3.svg" />
 
 So all of the numerical numbers we were getting from the result of the determinant represented the change of area scale if we applied the linear transformation of multiplying a matrix by the basis vectors. Could you tell what the determinant of a basis vector is? It's one. because if we were to multiply that determinant by every area in the space, we will have no change. Since the determinant is one, and multiplication by one has no effect on areas.
 
@@ -145,7 +145,7 @@ if they were all non-zero entries, ``b`` and ``c`` would tell us how much they s
 
 We could say that, since this parallelogram is in the boundaries of our Large rectangle, and since we have its area (from ``ad + bc``), we could calculate the areas of the parallelogram's surroundings, and then subtract it from the large rectangle to get the area of the parallelogram.
 
-<img src="https://www.3blue1brown.com/content/lessons/2016/determinant/determinant_diagram.svg" />
+<img src="https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2016/determinant/figures/determinant_diagram.svg" />
 
 with that, we're only left with ``ad - bc``.
 
@@ -153,7 +153,7 @@ So in other words, ``ad - bc`` is the product of extremes and means of ``(a+b)(c
 
 Surely, the surroundings can differ based on the figure.
 
-<img src="https://www.3blue1brown.com/content/lessons/2016/determinant/scale_areas.svg" />
+<img src="https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2016/determinant/figures/scale_areas.svg" />
 
 No idea how this can be calculated, actually.
 
